@@ -20,6 +20,7 @@ public class TouchBehavior : MonoBehaviour
         {
             touch = Input.GetTouch(0);
             text.text = touch.phase.ToString();
+            
             if(touch.phase == TouchPhase.Ended)
             {
                 timeTouchEnded = Time.time;

@@ -6,18 +6,43 @@ public class Duplicate : MonoBehaviour
 {
     public GameObject car;
     public SpriteRenderer sr;
-    public Color pink;
-    // Start is called before the first frame update
+    public Color blue;
+    public Color green;
+    public Color red;
+    public Color black;
+    public string currentColor;
     void Start()
     {
-        
+        SetRandomColor();
+    }
+    private void SetRandomColor()
+    {
+
+        int ran = UnityEngine.Random.Range(0, 3);
+        switch (ran)
+        {
+            case 0:
+                  
+                currentColor = "Blue";
+                sr.color = blue;
+                break;
+            case 1:
+                currentColor = "Green";
+                sr.color = green;
+                break;
+            case 2:
+                currentColor = "Red";
+                sr.color = red;
+                break;
+            case 3:
+                currentColor = "Black";
+                sr.color = black;
+                break;
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -27,7 +52,7 @@ public class Duplicate : MonoBehaviour
 
             Destroy(collision.gameObject);
             Debug.Log("Something");
-            sr.color = pink;
+            SetRandomColor();
             Instantiate(car, new Vector2(6.29f, -3.07f), transform.rotation);
 
         }
