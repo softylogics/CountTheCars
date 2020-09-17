@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Movementcar : MonoBehaviour
 {
-    float position = 0.05f;
+    float position = 0.1f;
 
     // Start is called before the first frame update
     void Start()

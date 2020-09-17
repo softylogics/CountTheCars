@@ -12,6 +12,7 @@ public class TouchBehavior : MonoBehaviour
     private float timeTouchEnded;
     private float displayTime = .5f;
     
+    
 
 
     // Update is called once per frame
